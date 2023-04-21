@@ -1,9 +1,16 @@
 {
   "name": "animagraphs",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A collection of animated graphs built using D3.js and React-Spring.",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/dylanszejnblum/animagraphs.git"
   },
-  "author": "Your Name <your.email@example.com>",
+  "author": "@dylansz_",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dylanszejnblum/animagraphs/issues"
