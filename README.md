@@ -52,13 +52,6 @@ An animated line chart component that displays a line representing the relations
 
 
 
-
-- Additional browser support
-
-- Add more integrations
-
-
-
 ### Props
 
 | Name | Type | Description |
