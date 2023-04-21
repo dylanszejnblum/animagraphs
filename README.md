@@ -55,7 +55,8 @@ An animated line chart component that displays a line representing the relations
 | color | `string` | The color of the line and tooltips |
 | displayValues | `boolean` | If `true`, display values next to the tooltips|
 
-### Customization
+
+## Customization
 
 Animagraphs components are designed to be customizable. You can pass custom colors and other styling options through props.
 

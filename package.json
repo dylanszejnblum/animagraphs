@@ -1,7 +1,7 @@
 {
   "name": "animagraphs",
   "version": "1.0.0",
-  "description": "A React component to display an animated line chart using D3 and React Spring, written in TypeScript",
+  "description": "A collection of animated graphs built using D3.js and React-Spring.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
