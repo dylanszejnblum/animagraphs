@@ -2,6 +2,8 @@
 
 A collection of animated graphs built using D3.js and React-Spring.
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
 Animagraphs is a library that provides a variety of animated graphs for your data visualization needs. Built with D3.js and React-Spring, these components are designed to be easy to integrate and customize within your React applications.
 
 ## Installation
@@ -43,6 +45,20 @@ Next, render the graph component within your React component, passing the requir
 `AnimatedLineChart`
 An animated line chart component that displays a line representing the relationship between data points. Supports tooltips and value display.
 
+
+### To do
+- Add `AnimatedBarChart` , `AnimatedScatterPlot`, `AnimatedPieChart` components
+- Add more degrees of customization (e.g. line thickness, tooltip styling, etc.)
+
+
+
+
+- Additional browser support
+
+- Add more integrations
+
+
+
 ### Props
 
 | Name | Type | Description |
@@ -61,8 +77,15 @@ An animated line chart component that displays a line representing the relations
 Animagraphs components are designed to be customizable. You can pass custom colors and other styling options through props.
 
 
-Contributing
+## Contributing
 Contributions are welcome! Please feel free to submit issues or pull requests.
+
+
+## Authors
+
+- [@dylansz_](https://twitter.com/dylansz_)
+
+
 
 License
 Animagraphs is released under the MIT License.
