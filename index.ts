@@ -1,3 +1,3 @@
-import  AnimatedLineChart  from "./AnimatedLineChart";
+import  AnimatedLineChart  from "./components/AnimatedLineChart";
 
 export { AnimatedLineChart };
