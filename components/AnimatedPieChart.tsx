@@ -16,7 +16,9 @@ const AnimatedPieChart: React.FC<AnimatedPieChartProps> = ({
   width = 500,
   height = 500,
 }) => {
-  const arcs = d3.pie().value((d: any) => d.value)(data);
+type DataItem = { label: string; value: number; };
+
+  const arcs = d3.pie<DataItem>().value(d => d.value)(data);
   const arcGenerator = d3.arc().innerRadius(0).outerRadius(Math.min(width, height) / 2);
 
   const transitions = useTransition(arcs, {
@@ -32,7 +34,7 @@ const AnimatedPieChart: React.FC<AnimatedPieChartProps> = ({
         {transitions((props, item, t, i) => (
           <animated.path
             key={i}
-            d={arcGenerator(props as any)}
+            d={arcGenerator(props as any) || ''}
             fill={colors[i % colors.length]}
           />
         ))}
