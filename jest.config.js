@@ -1,0 +1,2 @@
+
+setupFilesAfterEnv: ['./jest.setup.js'],

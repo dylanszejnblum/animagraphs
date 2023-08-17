@@ -1,10 +1,7 @@
-# Animagraphs
 
-A collection of animated graphs built using D3.js and React-Spring.
+# AnimaGraphs
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-Animagraphs is a library that provides a variety of animated graphs for your data visualization needs. Built with D3.js and React-Spring, these components are designed to be easy to integrate and customize within your React applications.
+A collection of animated graphs built using D3.js and React-Spring. This library provides components for Line, Pie, and Bar charts with smooth animations.
 
 ## Installation
 
@@ -12,73 +9,56 @@ Animagraphs is a library that provides a variety of animated graphs for your dat
 npm install animagraphs
 ```
 
-or
-
-```bash
-yarn add animagraphs
-```
-
 ## Usage
 
-First, import the required graph component from animagraphs:
+### AnimatedLineChart
 
-```javascript
+```jsx
 import { AnimatedLineChart } from 'animagraphs';
+
+const data = [...]; // Your line chart data
+const colors = {...}; // Color customization
+
+<AnimatedLineChart data={data} colors={colors} ...otherProps />
 ```
 
-Next, render the graph component within your React component, passing the required props:
+#### Props
 
-```javascript
-<AnimatedLineChart
-  points={data}
-  width={800}
-  height={500}
-  margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-  setActiveDataCallback={(data) => console.log(data)}
-  color="#3f51b5"
-  displayValues
-/>
+- `data`: Array of objects with `x` (number or Date) and `y` (number) properties.
+- `colors`: Object with properties `line`, `points`, `xAxis`, and `yAxis` for color customization.
+
+### AnimatedPieChart
+
+```jsx
+import { AnimatedPieChart } from 'animagraphs';
+
+const data = [...]; // Your pie chart data
+const colors = [...]; // Array of colors
+
+<AnimatedPieChart data={data} colors={colors} ...otherProps />
 ```
 
-## Components
+#### Props
 
-`AnimatedLineChart`
-An animated line chart component that displays a line representing the relationship between data points. Supports tooltips and value display.
+- `data`: Array of objects with `label` (string) and `value` (number).
+- `colors`: Array of colors for each segment of the pie.
 
+### AnimatedBarChart
 
-### To do
-- Add `AnimatedBarChart` , `AnimatedScatterPlot`, `AnimatedPieChart` components
-- Add more degrees of customization (e.g. line thickness, tooltip styling, etc.)
+```jsx
+import { AnimatedBarChart } from 'animagraphs';
 
+const data = [...]; // Your bar chart data
+const colors = {...}; // Color customization
 
+<AnimatedBarChart data={data} colors={colors} ...otherProps />
+```
 
-### Props
+#### Props
 
-| Name | Type | Description |
-| --- | --- | --- |
-| points | `number[][]` | An array of `[x, y]` coordinates representing the data points |
-| width | `number` | The width of the SVG container |
-| height | `number` | The height of the SVG container |
-| margin | `{ top: number; right: number; bottom: number; left: number }` | The margins around the chart |
-| setActiveDataCallback | `(data: { x: Date; y: number } | null) => void` | A callback function that is called with the active data point when hovering over the chart |
-| color | `string` | The color of the line and tooltips |
-| displayValues | `boolean` | If `true`, display values next to the tooltips|
+- `data`: Array of objects with `label` (string) and `value` (number).
+- `colors`: Object with properties `bars`, `xAxis`, and `yAxis` for color customization.
 
+## License
 
-## Customization
-
-Animagraphs components are designed to be customizable. You can pass custom colors and other styling options through props.
-
-
-## Contributing
-Contributions are welcome! Please feel free to submit issues or pull requests.
-
-
-## Authors
-
-- [@dylansz_](https://twitter.com/dylansz_)
-
-
-
-License
-Animagraphs is released under the MIT License.
+MIT
