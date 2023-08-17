@@ -1,6 +1,6 @@
 {
   "name": "animagraphs",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A collection of animated graphs built using D3.js and React-Spring.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
